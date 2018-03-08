@@ -144,12 +144,43 @@ p {
   vertical-align: top;
   list-style: none;
   padding: 5px;
-  max-width: 115px;
+  max-width: 100px;
   display: inline-block;
-  .left {
-
-  }
 }
+
+
+
+.text-box {
+  vertical-align: top;
+  padding: 5px;
+  display: inline-block;
+  min-width: 325px;
+  max-width: 700px;
+}
+
+.article {
+  background-color: white;
+  padding: 1em;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.float-left {
+  float: left;
+  margin-right: 2em;
+}
+
+.float-right {
+  float: right;
+  margin-left: 2em;
+}
+
+.text-container {
+  max-width: 700px;
+  min-width: 400px;
+}
+
 
 ul {
   list-style: none;
