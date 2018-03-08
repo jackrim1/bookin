@@ -115,6 +115,7 @@ p {
     background-color: white;
     border-radius: 2px;
     padding: 10px;
+    width: 100%;
   }
 
   nav ul {
