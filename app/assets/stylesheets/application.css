@@ -135,6 +135,18 @@ p {
   grid-area: content;
 }
 
+.image-box {
+  vertical-align: top;
+  list-style: none;
+  padding: 15px;
+  max-width: 150px;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
 .main-nav {
   grid-area: nav;
 }
