@@ -146,6 +146,9 @@ p {
   padding: 5px;
   max-width: 115px;
   display: inline-block;
+  .left {
+
+  }
 }
 
 ul {

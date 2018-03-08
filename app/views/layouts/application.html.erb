@@ -15,6 +15,22 @@
   </head>
 
   <body>
+    <div class="wrapper">
+      <header class="main-head">
+        <div class="header-img"><%= image_tag("logo.jpg", height: 45) %></div>
+      </header>
+
+
+
+    <footer class="main-footer center"><%=link_to "About", "/index" %></footer>
     <%= yield %>
+    </div>
+
+
+
+
+
+
+
   </body>
 </html>
