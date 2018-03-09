@@ -136,8 +136,6 @@ p {
     padding: 0;
   }
 
-
-
 .content {
   grid-area: content;
 }
@@ -149,8 +147,6 @@ p {
   max-width: 100px;
   display: inline-block;
 }
-
-
 
 .text-box {
   vertical-align: top;
@@ -203,6 +199,9 @@ ul {
 .main-footer {
   grid-area: footer;
   height: 45px;
+  background-color: #E5ECF1;
+  padding-left: 30px;
+  color: #68a4cc;
 }
 
 .wrapper {
@@ -258,8 +257,9 @@ ul {
 .main-head {
   grid-area: header;
   background: #2E94D8;
-  height: 45px;
+  height: 55px;
   padding: 0px;
+  position: relative;
 }
 
 .main-head a {
@@ -281,6 +281,7 @@ ul {
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-top: 0px;
 }
 
 /* Dropdown button */
@@ -308,6 +309,7 @@ ul {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+
 }
 
 /* Links inside the dropdown */
