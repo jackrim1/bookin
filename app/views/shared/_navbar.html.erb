@@ -1,0 +1,24 @@
+<header class="main-head">
+        <div class="center" style="position:absolute; top:50%; height:0.5em; margin-top:-1.2em;"><a href=" "><%= image_tag("logo_no_slogo.png", height: 45) %></a></div>
+        <div class="dropdown" style="float:right; top:50%; height:0.5em; margin-top:-1.4em;">
+          <div class="dropbtn">
+            <%= image_tag("dropdown.png", height: 45) %>
+          </div>
+              <div class="dropdown-content">
+
+                <% if (!user_signed_in?) %>
+                  <%= link_to "Login", new_user_session_path %>
+                  <%= link_to "Sign Up", new_user_registration_path %>
+                <% else %>
+                  <%= link_to "Profile", edit_user_registration_path %>
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+                <% end %>
+
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+
+
+
+              </div>
+        </div>
+      </header>
