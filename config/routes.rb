@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'contact/index'
+
   get 'pages/home'
+  get 'about/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
