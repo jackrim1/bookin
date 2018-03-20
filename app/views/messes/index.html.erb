@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Messes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Postcode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messes.each do |mess| %>
+      <tr>
+        <td><%= mess.name %></td>
+        <td><%= mess.address %></td>
+        <td><%= mess.postcode %></td>
+        <td><%= link_to 'Show', mess %></td>
+        <td><%= link_to 'Edit', edit_mess_path(mess) %></td>
+        <td><%= link_to 'Destroy', mess, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mess', new_mess_path %>

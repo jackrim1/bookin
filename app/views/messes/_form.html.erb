@@ -1,0 +1,32 @@
+<%= form_with(model: mess, local: true) do |form| %>
+  <% if mess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mess.errors.count, "error") %> prohibited this mess from being saved:</h2>
+
+      <ul>
+      <% mess.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :mess_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :mess_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postcode %>
+    <%= form.text_field :postcode, id: :mess_postcode %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :messes
   get 'contact/index'
 
   get 'pages/home'

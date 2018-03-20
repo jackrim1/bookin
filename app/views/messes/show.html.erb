@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mess.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @mess.address %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @mess.postcode %>
+</p>
+
+<%= link_to 'Edit', edit_mess_path(@mess) %> |
+<%= link_to 'Back', messes_path %>
