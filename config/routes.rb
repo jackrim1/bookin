@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :messes
+  resources :messes do
+    member do
+      get 'join'
+      get 'leave'
+    end
+  end
+
   get 'contact/index'
 
   get 'pages/home'

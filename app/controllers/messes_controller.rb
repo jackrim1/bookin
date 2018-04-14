@@ -1,8 +1,9 @@
 class MessesController < ApplicationController
-  before_action :set_mess, only: [:show, :edit, :update, :destroy]
+  before_action :set_mess, only: [:show, :edit, :update, :destroy, :join, :leave]
 
   # GET /messes
   # GET /messes.json
+
   def index
     @messes = Mess.all
   end
@@ -61,6 +62,21 @@ class MessesController < ApplicationController
     end
   end
 
+  ####### JOINING AND LEAVING A MESS #########
+
+  def join
+    @mess = Mess.find(params[:id])
+    current_user.update_attributes(:mess_id, @mess_id)
+    redirect_to @mess
+  end
+
+  def leave
+    @mess = Mess.find(mess_params)
+    current_user.update_attributes(:mess_id, nil)
+    redirect_to @mess
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_mess
@@ -69,6 +85,6 @@ class MessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mess_params
-      params.require(:mess).permit(:name, :address, :postcode)
+      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id)
     end
 end
