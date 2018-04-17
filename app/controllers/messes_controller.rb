@@ -65,8 +65,10 @@ class MessesController < ApplicationController
   ####### JOINING AND LEAVING A MESS #########
 
   def join
+    @user = current_user
     @mess = Mess.find(params[:id])
-    current_user.update_attributes(:mess_id, @mess_id)
+    @mess_id = @mess.id
+    @user.update_attributes(:mess_id => @mess_id)
     redirect_to @mess
   end
 
@@ -85,6 +87,6 @@ class MessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mess_params
-      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id)
+      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id, :mess_id)
     end
 end
