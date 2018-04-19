@@ -36,9 +36,19 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+
+
+<h3>Register as a Member of Mess Staff</h3>
+
+  <div class="field">
+    <%= f.label "Member of Mess Staff" %>
+    <%= f.check_box :manager %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
 
 <h3>Cancel my account</h3>
