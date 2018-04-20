@@ -26,6 +26,11 @@
     <%= form.text_field :postcode, id: :mess_postcode %>
   </div>
 
+  <div class="field">
+    <%= form.label :alacarte %>
+    <%= form.check_box :alacarte, {}, true, false %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

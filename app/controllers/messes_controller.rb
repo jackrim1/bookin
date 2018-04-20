@@ -87,6 +87,6 @@ class MessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mess_params
-      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id, :mess_id)
+      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id, :mess_id, :alacarte)
     end
 end
