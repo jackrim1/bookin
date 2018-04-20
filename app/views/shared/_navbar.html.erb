@@ -15,7 +15,12 @@
                 <% else %>
                   <%= link_to "Profile", edit_user_registration_path %>
                   <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+                  <% if (current_user.manager?) %>
+                  <%= link_to "Mess Settings", edit_mess_path(current_user.mess_id) %>
+                  <% end %>
                 <% end %>
+
+
 
                 <%= link_to "About", about_index_path %>
                 <%= link_to "Contact", contact_index_path %>
