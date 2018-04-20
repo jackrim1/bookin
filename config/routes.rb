@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
 
 
-
-
-
 resources :messes do
     member do
       get 'join'
       get 'leave'
     end
   end
+
+  resources :dashboard
 
   get 'contact/index'
 
