@@ -1,4 +1,10 @@
 class ApplicationController < ActionController::Base
+  include AbstractController::Rendering
+  include ActionController::MimeResponds
+  include AbstractController::Translation
+  include ActionController::ImplicitRender
+  include ActionController::Helpers
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protect_from_forgery with: :exception
@@ -20,7 +26,7 @@ class ApplicationController < ActionController::Base
     @devise_mapping ||= Devise.mappings[:user]
   end
 
-  protected
+protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:manager)

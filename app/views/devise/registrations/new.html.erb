@@ -27,8 +27,11 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.select :manager, options_for_select([['Yes', :true], ['No', :false]], selected: :manager) %>
+    <%= f.submit "Update" %>
   </div>
+
+
 <% end %>
 
 <%= render "devise/shared/links" %>

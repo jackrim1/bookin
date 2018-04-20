@@ -36,20 +36,23 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
-
-
-<h3>Register as a Member of Mess Staff</h3>
-
-  <div class="field">
-    <%= f.label "Member of Mess Staff" %>
-    <%= f.check_box :manager %>
-  </div>
-
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
 
 <% end %>
+
+<%= form_for(resource, as: resource_name, url: edit_registration_path(resource_name), html: { method: :get }) do |f| %>
+
+<h3>Register as a Member of Mess Staff</h3>
+
+
+  <div class="actions">
+    <%= f.select :manager, options_for_select([['Yes', :true], ['No', :false]], selected: :manager) %>
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
+
 
 <h3>Cancel my account</h3>
 
