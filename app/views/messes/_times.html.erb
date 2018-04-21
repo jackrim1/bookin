@@ -1,4 +1,4 @@
-<%= form_tag edit_mess_path(@mess), method: :get do |form| %>
+<%= form_for @mess, method: "put" do |form| %>
 
 <div class="field">
   <%= form.label :break_cutoff, "Breakfast bookin cutoff time" %>

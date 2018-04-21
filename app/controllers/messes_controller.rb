@@ -20,7 +20,7 @@ class MessesController < ApplicationController
 
   # GET /messes/1/edit
   def edit
-    @mess = Mess.find(mess_params)
+    @mess = Mess.find(params[:id])
   end
 
   # POST /messes
@@ -88,6 +88,6 @@ class MessesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mess_params
-      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id, :mess_id, :alacarte)
+      params.require(:mess).permit(:name, :address, :postcode, :user_id, :id, :mess_id, :alacarte, :break_start, :break_finish, :break_cutoff, :lunch_start, :lunch_finish, :lunch_cutoff, :dinner_start, :dinner_finish, :dinner_cutoff)
     end
 end
