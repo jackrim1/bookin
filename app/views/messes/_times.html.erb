@@ -1,0 +1,52 @@
+<%= form_tag edit_mess_path(@mess), method: :get do |form| %>
+
+<div class="field">
+  <%= form.label :break_cutoff, "Breakfast bookin cutoff time" %>
+  <%= form.time_select :break_cutoff, id: :break_cutoff, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :break_start, "Breakfast Start Time" %>
+  <%= form.time_select :break_start, id: :break_start, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :break_finish, "Breakfast Finish Time" %>
+  <%= form.time_select :break_finish, id: :break_finish, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :lunch_cutoff, "Lunch bookin cutoff time" %>
+  <%= form.time_select :lunch_cutoff, id: :lunch_cutoff, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :lunch_start, "Lunch Start Time" %>
+  <%= form.time_select :lunch_start, id: :lunch_start, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :lunch_finish, "Lunch Finish Time" %>
+  <%= form.time_select :lunch_finish, id: :lunch_finish, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :dinner_cutoff, "Dinner bookin cutoff time" %>
+  <%= form.time_select :dinner_cutoff, id: :dinner_cutoff, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :dinner_start, "Dinner Start Time" %>
+  <%= form.time_select :dinner_start, id: :dinner_start, :minute_step => 15 %>
+</div>
+
+<div class="field">
+  <%= form.label :dinner_finish, "Dinner Finish Time" %>
+  <%= form.time_select :break_start, id: :break_start, :minute_step => 15 %>
+</div>
+
+<div class="actions">
+  <%= form.submit %>
+</div>
+
+<% end %>

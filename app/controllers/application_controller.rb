@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
     helper_method :resource_name, :resource, :devise_mapping, :resource_class
 
+    before_action :set_timezone
+
+
+  def set_timezone
+    Time.zone = 'GMT'
+  end
+
   def resource_name
     :user
   end

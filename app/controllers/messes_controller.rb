@@ -20,6 +20,7 @@ class MessesController < ApplicationController
 
   # GET /messes/1/edit
   def edit
+    @mess = Mess.find(mess_params)
   end
 
   # POST /messes
