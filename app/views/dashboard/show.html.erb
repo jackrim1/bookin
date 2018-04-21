@@ -1,1 +1,5 @@
-testy testicles
+<% if (current_user.manager?) %>
+  <%= render 'manager' %>
+  <% else %>
+  <%= render 'member' %>
+<% end %>
