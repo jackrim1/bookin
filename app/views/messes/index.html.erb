@@ -29,5 +29,13 @@
 
 <br>
 
+<%= week_calendar events: @events do |day, events| %>
+  <div><strong><%= day.to_s(:long) %></strong></div>
+  <% events.each do |event| %>
+  <div>
+    <%= link_to event.name, event %>
+  </div>
+  <% end %>
+  <% end %>
 
 <%= link_to 'New Mess', new_mess_path %>
