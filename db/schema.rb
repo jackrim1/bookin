@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 20180422142528) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.time "break_start"
-    t.time "break_finish"
-    t.time "break_cutoff"
-    t.time "lunch_start"
-    t.time "lunch_finish"
-    t.time "lunch_cutoff"
-    t.time "dinner_start"
-    t.time "dinner_finish"
-    t.time "dinner_cutoff"
     t.text "recurring"
     t.index ["mess_id"], name: "index_events_on_mess_id"
   end

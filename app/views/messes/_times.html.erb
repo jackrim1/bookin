@@ -6,6 +6,11 @@
 </div>
 
 <div class="field">
+  <%= form.label :recurring %>
+  <%= form.select_recurring :recurring %>
+</div>
+
+<div class="field">
   <%= form.label :break_start, "Breakfast Start Time" %>
   <%= form.time_select :break_start, id: :break_start, :minute_step => 15 %>
 </div>
