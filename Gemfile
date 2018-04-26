@@ -65,3 +65,6 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin'
 gem 'cancancan'
 gem 'bcrypt'
+gem 'simple_calendar'
+gem 'recurring_select', github: "RundownApp/recurring_select"
+gem 'ice_cube'

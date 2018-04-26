@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421114004) do
+ActiveRecord::Schema.define(version: 20180422142528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20180421114004) do
     t.time "dinner_start"
     t.time "dinner_finish"
     t.time "dinner_cutoff"
+    t.text "recurring"
     t.index ["mess_id"], name: "index_events_on_mess_id"
   end
 
